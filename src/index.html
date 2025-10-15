@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cellule d'écoute</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="hero-bg">
+        <!-- ========== Start navbar  ========== -->
+        <nav class="navbar">
+            <div class="container flex-container">
+                <div class="navbar__logo">
+                    <h3><a href="#">Cellule d'écoute</a></h3>
+                </div>
+                <ul class="navbar__list">
+                    <li class="navbar__list-item"><a href="#hero">Accueil</a></li>
+                    <li class="navbar__list-item"><a href="#leading">Nos Thérapeutes</a></li>
+
+                    <li class="navbar__list-item"><a href="#faq">F&Q</a></li>
+                </ul>
+
+
+            </div>
+        </nav>
+        <!-- ========== End navbar  ========== -->
+
+        <!-- ========== Start hero ========== -->
+        <header class="hero" id="hero">
+            <div class="container flex-container">
+                <div class="hero__info">
+                    <h2 class="hero__title">
+                        Prenez soin de votre bien-être mental
+                    </h2>
+                    <p class="hero__desc">
+                        Nous sommes là pour vous écouter et vous aider à trouver la sérénité.
+                    </p>
+                    <p class="hero__desc">
+                        Prenez rendez-vous avec nos experts dès aujourd'hui.
+                    </p>
+                    <div class="hero__form">
+                        <h3 class="hero__form-title">Téléchargez un Fichier</h3>
+                        <p class="hero__desc">Ajoutez un fichier pour accompagner votre demande.</p>
+                        <div class="file-upload-container">
+                            <label for="fileInput" class="file-upload-label">Choisissez un fichier :</label>
+                            <input type="file" id="fileInput" class="file-upload-input" />
+                            <button id="uploadButton" class="btn active-btn">Uploader</button>
+                        </div>
+                        <p id="uploadResult" class="upload-result"></p>
+                    </div>
+
+
+                </div>
+
+                <script src="main.js"></script>
+
+                <div class="hero__form">
+                    <h3 class="hero__form-title">Réservez votre séance</h3>
+                    <form class="hero__form-form" action="">
+                        <label for="name">Nom *</label>
+                        <input type="text" name="name" id="name" placeholder="Nom complet *" required>
+
+                        <label for="email">Adresse Email *</label>
+                        <input type="email" name="email" id="email" placeholder="exemple@gmail.com" required>
+
+                        <label for="therapistSelect">Thérapeute *</label>
+                        <select name="therapist" id="therapistSelect" required>
+                            <option value="">Sélectionnez un thérapeute</option>
+                            <option value="1">Dr. Kenza Slaoui</option>
+                            <option value="2">Dr. Kenza Glibi</option>
+                            <option value="3">Dr. Jaafar Maaoun</option>
+                        </select>
+
+                        <label for="appointmentDate">Date *</label>
+                        <input type="date" name="date" id="appointmentDate" required>
+
+                        <button type="button" class="active-btn btn" id="getSlotsButton">
+                            Vérifiez la disponibilité
+                        </button>
+                    </form>
+
+                    <div id="availability" class="availability-container">
+                        <h4>Disponibilités :</h4>
+                        <ul id="slotsList">
+                            <li>Aucune disponibilité trouvée pour le moment.</li>
+                        </ul>
+                        <div id="selectedSlot">
+                            <label for="timeSlot">Choisissez un créneau horaire :</label>
+                            <select id="timeSlot" name="timeSlot" required>
+                                <option value="">Sélectionnez une disponibilité</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button id="bookButton" class="btn active-btn" style="display: none;">Réservez votre
+                        rendez-vous</button>
+                </div>
+
+
+
+
+
+
+            </div>
+        </header>
+        <!-- ========== End hero ========== -->
+    </div>
+
+
+
+
+
+
+
+    <!-- ========== Start leading ========== -->
+    <section class="leading" id="leading">
+        <section class="flex-container container">
+            <header class="section__header">
+                <h3 class="section__title">
+                    Rencontrez nos thérapeutes
+                </h3>
+                <p class="section__desc">
+                    Nos thérapeutes expérimentés sont là pour vous aider à prioriser votre santé mentale et votre
+                    bien-être.
+                </p>
+            </header>
+            <div class="leading__cards">
+
+                <div class="leading__cards-card">
+                    <div class="leading__cards-card-header">
+                        <div class="card-icon">
+                            <img class="person-icon" src="./assets/images/slaoui.jpg" alt="person-icon">
+
+
+                        </div>
+                        <h5 class="card-title">
+                            Dr. Kenza Slaoui
+                        </h5>
+                    </div>
+                    <div class="leading__cards-card-info">
+                        <ul>
+                            <li class="leading__cards-card-info-li"> Titulaire d'un diplôme en Psychologie clinique et
+                                en psychopathologie intégrative , Dr. Kenza Slaoui est particulièrement
+                                compétente dans la gestion des troubles anxieux et dépressifs
+                                grâce à son expertise en thérapie cognitivo-comportementale.
+                            </li>
+
+
+                            <li><a href="#">Réserver une séance</a></li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- card end  -->
+                <!-- card start  -->
+                <div class="leading__cards-card">
+                    <div class="leading__cards-card-header">
+                        <div class="card-icon">
+                            <img class="person-icon" src="./assets/images/glibi.jpg" alt="person-icon">
+
+
+                        </div>
+                        <h5 class="card-title">
+                            Dr. Kenza Glibi
+                        </h5>
+                    </div>
+                    <div class="leading__cards-card-info">
+                        <ul>
+                            <li class="leading__cards-card-info-li"> Psychologue clinicienne ayant travaillé dans un
+                                centre SSR (Soins de Suite et de Réadaptation) en France, Kenza Glibi excelle dans les
+                                entretiens individuels et le
+                                soutien familial, en collaboration avec des équipes pluridisciplinaires pour offrir des
+                                soins holistiques.</li>
+
+                            <li>
+                                <a href="#">Réserver une séance</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- card end  -->
+                <!-- card start  -->
+                <div class="leading__cards-card">
+                    <div class="leading__cards-card-header">
+                        <div class="card-icon">
+                            <img class="person-icon" src="./assets/images/maaouni.jpg" alt="person-icon">
+
+
+                        </div>
+                        <h5 class="card-title">
+                            Dr. Jaafar Maaoun
+                        </h5>
+                    </div>
+                    <div class="leading__cards-card-info">
+                        <ul>
+                            <li class="leading__cards-card-info-li"> Thérapeute basé à Paris, Jaafar Maaoun propose un
+                                accompagnement bienveillant et professionnel, adapté aux besoins spécifiques de ses
+                                patients. Son expérience internationale enrichit son approche
+                                pour soutenir le bien-être
+                                mental de chacun.</li>
+                            <li>
+                                <a href="#">Réserver une séance</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- card end  -->
+            </div>
+        </section>
+    </section>
+    <!-- ========== End leading ========== -->
+    <!-- ========== Start FAQ ========== -->
+    <section class="faq reviews" id="faq">
+
+        <div class="flex-container container">
+            <div class="section__header">
+                <h3 class="section__title">
+                    FAQ
+                </h3>
+                <p class="section__desc">
+                    Découvrez les réponses aux questions fréquemment posées sur nos thérapeutes et nos services.
+                </p>
+            </div>
+            <div class="faq__cards reviews__cards">
+
+                <article class="faq__cards-card">
+                    <div class="faq__cards-card-header">
+                        <img class="arrow-icon" src="./assets/icons/right-arrow.svg" alt="arrow-icon">
+                    </div>
+                    <div class="faq__cards-card-body">
+                        <h4>
+                            Où trouver le bureau de la cellule d'écoute ?
+                        </h4>
+                        <p class="faq__cards-card-info reviews__cards-card-info">
+                            Batiment 1 - 1er etage - Salle
+                        </p>
+                    </div>
+                </article>
+                <article class="faq__cards-card">
+                    <div class="faq__cards-card-header">
+                        <img class="arrow-icon" src="./assets/icons/right-arrow.svg" alt="arrow-icon">
+                    </div>
+                    <div class="faq__cards-card-body">
+                        <h4>
+                            Comment contacter Dr. Kenza Slaoui ?
+                        </h4>
+                        <p class="faq__cards-card-info reviews__cards-card-info">
+                            Kenzaslaouipsy@gmail.com <br>
+                            06 61 07 16 03
+
+                        </p>
+                    </div>
+                </article>
+                <article class="faq__cards-card">
+                    <div class="faq__cards-card-header">
+                        <img class="arrow-icon" src="./assets/icons/right-arrow.svg" alt="arrow-icon">
+                    </div>
+                    <div class="faq__cards-card-body">
+                        <h4>
+                            Disponibilités de Dr. Kenza Slaoui ?
+                        </h4>
+                        <p class="faq__cards-card-info reviews__cards-card-info">
+                            Mardi et Jeudi <br> 9H30 à 12H30
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="faq__cards reviews__cards">
+
+                <article class="faq__cards-card">
+                    <div class="faq__cards-card-header">
+                        <img class="arrow-icon" src="./assets/icons/right-arrow.svg" alt="arrow-icon">
+                    </div>
+                    <div class="faq__cards-card-body">
+                        <h4>
+                            Comment contacter Dr. Kenza Glibi ?
+                        </h4>
+                        <p class="faq__cards-card-info reviews__cards-card-info">
+                            Kenzaglib@live.fr <br>
+                            06 60 30 21 19
+                        </p>
+                    </div>
+                </article>
+                <article class="faq__cards-card">
+                    <div class="faq__cards-card-header">
+                        <img class="arrow-icon" src="./assets/icons/right-arrow.svg" alt="arrow-icon">
+                    </div>
+                    <div class="faq__cards-card-body">
+                        <h4>
+                            Disponibilités de Dr. Kenza Glibi ?
+                        </h4>
+                        <p class="faq__cards-card-info reviews__cards-card-info">
+                            Mercredi et Vendredi <br> 12H30 à 15H30
+                        </p>
+                    </div>
+                </article>
+                <article class="faq__cards-card">
+                    <div class="faq__cards-card-header">
+                        <img class="arrow-icon" src="./assets/icons/right-arrow.svg" alt="arrow-icon">
+                    </div>
+                    <div class="faq__cards-card-body">
+                        <h4>
+                            Comment contacter Dr. Jaafar Maaoun ?
+                        </h4>
+                        <p class="faq__cards-card-info reviews__cards-card-info">
+                            Jaafar.maaouni@gmail.com <br>
+                            07 70 00 20 65
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="faq__cards reviews__cards">
+
+                <article class="faq__cards-card">
+                    <div class="faq__cards-card-header">
+                        <img class="arrow-icon" src="./assets/icons/right-arrow.svg" alt="arrow-icon">
+                    </div>
+                    <div class="faq__cards-card-body">
+                        <h4>
+                            Disponibilités de Dr. Jaafar Maaoun ?
+                        </h4>
+                        <p class="faq__cards-card-info reviews__cards-card-info">
+                            Merdi et Jeudi <br>
+                            17H30 à 20H
+                        </p>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- ========== End FAQ ========== -->
+
+
+
+
+
+</body>
+
+</html>
